@@ -1,0 +1,91 @@
+$margenes-Bajos-items: 2em;
+$color: #fddc1f;
+$margen-Bajo2: 2rem;
+$anchoItems-responsive: 60% !important;
+
+
+@mixin disposicion-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*------BBANERS GENERALES------*/
+@mixin banners {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0%;
+    height: 750px;
+    width: 100%;
+}
+@mixin bannerInfoIZ {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+}
+@mixin bannerInDE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    color: white;
+    p, h2 {
+        margin: 10px 100px 10px 100px; 
+    }
+}
+/*------BBANERS RESPONSIVE TABLET------*/
+@mixin bannerDE {
+    margin-left: 40%;
+}
+@mixin bannerIZ {
+    margin-right: 40%;
+}
+/*------BBANERS RESPONSIVE CELU------*/
+@mixin bannerDER-Celu {
+    margin-left: 0%;
+}
+@mixin bannerIZ-Celu {
+    margin-right: 0%;
+}
+/*------PARA ITEMS DE NOVEDADES------*/
+@mixin itemNovedades {
+    height: auto;
+       width: 100%;
+       padding: 5rem 0 5rem 0;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       align-items: center;
+}
+@mixin novedadesH3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: $margen-Bajo2;
+    line-height: 40px;
+}
+
+/*-------Box Shadow----------*/  
+@mixin sombras {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+/*-------Algunos H3----------*/  
+@mixin h3Random {
+    color: $color;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+/*-------lineas medias--------*/
+@mixin lineaMedia {
+    border-left: 8px solid $color;
+    height: 200px;
+    position:absolute;
+    left: 50%;
+    margin-left: 3px;
+}

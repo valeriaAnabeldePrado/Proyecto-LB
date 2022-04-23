@@ -1,0 +1,61 @@
+@import "variables";
+
+@mixin botones {
+        background-color: $color;
+        color: black;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 15px;
+        width: 100px;
+        height: 30px;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: all 500ms ease;
+        border: none;
+        z-index: 999;
+            &:hover {
+                background-color: transparent;
+                color: white;
+                border: solid $color;  }
+}
+@mixin botones2 {
+    background-color: $color;
+    cursor: pointer;
+           color: black;
+           font-weight: bold;
+           border-radius: 10px;
+           width: 100px;
+           height: 40px;
+           text-transform: uppercase;
+           overflow: hidden;
+           transition: all 500ms ease;
+           border: 3px solid $color;
+           margin-top: 1.7rem;
+           
+               &:hover {
+                   background-color: transparent;
+                   color: $color;
+                   border: 3px solid $color;}
+    
+}
+/*------------BOTONES REDES-------------*/
+.fa1 {
+    padding: 1rem;
+    border-radius: 9px;
+    background: transparent;
+    border: 3px solid $color;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover{
+        box-shadow: 7px 5px 56px -14px #f0e009;
+    }
+    &:active{
+        transform: scale(0.97);
+        box-shadow: 7px 5px 56px -10px #f0e009;
+        color: $color;
+    }
+}

@@ -1,0 +1,284 @@
+@import "cuerposPages";
+@import "variables";
+
+/*---------------------------------------------------
+----------AREAS RANDOM MODIFICADAS-------------------
+-----------------------------------------------------*/
+@media screen and (max-width: 1000px) {
+    /*----------AREA SERVICIOS----------*/
+    .t-svs {
+        display: none;
+        opacity: 0;
+    }
+    .items-svs::before {
+      content: "";
+      width: 10vh;
+      padding: 4px;
+      background-color: $color;
+  }
+    
+     /*----------AREA MODULOS----------*/
+    .itemsmod {
+        display: flex;
+        flex-grow: 2;
+    }
+    .itemsmod-item {
+        width: 100% !important;
+    }
+    hr {
+        visibility: visible !important;
+        padding: 4px;
+        background-color: black;
+        width: 15vh;
+        margin-bottom: 2rem;
+    }
+    /*----------AREA QUIENES SOMOS----------*/
+    .t-svs-quienes {
+        display: none;
+    }
+    .items-qnq {
+        border-top: 4px solid $color;
+    }
+    /*----------NOVEDADES-----------*/   
+    
+    
+}
+
+@media screen and (max-width: 833px) {
+    
+  /*-----------MODULOS HABITACIONALES----------*/ 
+        .banner-modulos-izq {
+            @include bannerIZ;
+            p, h2, hr {
+                margin: 10px 90px 10px 90px;  
+            }
+        }
+   
+  }
+
+
+/*---------------------------------------------------
+----------------PARA TABLET----------------------- 
+----------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+ /*----------AREA GENERAL----------*/
+ .panel-btn {
+    right: 2rem;
+ }
+ .panel {
+    left: 50%;
+ }
+ .banner-derecha {
+    @include bannerDE;
+ }
+ /*----------AREA INDEX----------*/
+ 
+ .index-banner {
+    height: 700px;
+ }
+ .trabReaS {
+    margin-right: 40%;
+ }
+ .index-cosito {
+     flex-direction: column;
+     li {
+        padding: 1.5rem;
+     }
+ }
+
+  /*----------AREA SERVICIOS----------*/
+  .banner-servicios-izq {
+    @include bannerIZ;
+  }
+  .banner-servicios-izq {
+    p, h2, hr {
+        margin: 10px 50px 10px 50px; 
+    }
+  }
+  /*-----------AREA TRABAJOS REALIZADOS----------*/   
+  .bannerizq-trab-rea {
+    @include bannerIZ;
+  }
+  .info-trab-rea {
+    padding: 3rem;
+    .items-trab-rea {
+        margin: 2rem;
+        width: 80%;
+    }
+  }
+    .imgC {
+        height: 60vh;
+    }
+    /*-----------QUIENES SOMOS----------*/ 
+    .banner-quienes-der {
+        @include bannerDE;
+    }
+    .item1-quienes{
+        margin: 2rem;
+        padding: 0 2rem 0 2rem; 
+        h2 {
+            font-size: 8em;
+            margin: 2rem 0 2rem 0;
+        }
+    }
+    .items-qnq{
+        width: 400px;
+    }
+    .t-svs-quienes {
+        display: none;
+        visibility: hidden;
+    }
+    /*----------NOVEDADES-------------*/   
+    .banner-novedades-izq {
+        @include bannerDE;
+    }
+    .seccion_novedades-img {
+        margin: 0;
+    }
+    /*-----------MODULOS HABITACIONALES----------*/
+    /*la primera parte del banner esta en la de 833px*/
+
+    /*----------AREA SMARTBUILD----------*/
+    .linea-media {
+        visibility: hidden;
+    }
+    .smartItems {
+        border-top: 4px solid $color;
+        margin-top: 2rem;
+        width: $anchoItems-responsive;
+    }
+    .item-paneles {
+        width: $anchoItems-responsive;
+        text-align: center;
+    }
+    .smart-info2-cont {
+        width: $anchoItems-responsive;
+    }
+    /*----------AREA ABERTURAS DE ALUMINIO----------*/
+    .carpinteria-texto {
+        width: $anchoItems-responsive;
+    }
+    .carpinteria-texto2 {
+        width: $anchoItems-responsive;
+    }
+}
+
+/*---------------------------------------------------
+----------------PARA CELULARES----------------------- 
+----------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+    /*----------AREA GENERAL----------*/
+    .panel {
+        left: 30%;
+     }
+     .banner-derecha {
+        @include bannerDER-Celu;
+      }
+     /*----------AREA FOOTER----------*/
+    .footer-foo {
+        flex-direction: column;
+        height: 45vh;
+        padding: 2rem;
+        .itemfoo-redes{
+            flex-direction: row;
+            margin-bottom: 2rem;
+            li{
+                margin: 1rem;
+            }
+        }
+        .itemfoo {
+            text-align: center;
+            img {
+                margin-top: 2rem;
+            }
+        }
+    }
+    /*----------AREA INDEX----------*/
+    .index-banner{
+         height: 600px;
+     }
+    .items {
+        padding: 2rem;
+        margin: 0;
+    }
+    .index-novedades {
+        padding: 2rem !important;
+    }
+    .index-trabRea {
+        height: 500px;
+    }
+    .trabReaS {
+        margin-right: 0%;
+    }
+    /*----------AREA SERVICIOS----------*/
+    .banner-servicios-izq {
+        @include bannerIZ-Celu;
+    }
+    .items-svs {
+        width: 25vh !important;
+    }
+    /*-----------AREA TRABAJOS REALIZADOS----------*/ 
+    .bannerizq-trab-rea {
+        @include bannerIZ-Celu;
+      }
+      .info-trab-rea {
+        padding: 2rem;
+        .items-trab-rea {
+            margin: 1rem;
+            width: 90%;
+        }
+      }
+      .imgC {
+        height: 50vh;
+    } 
+    /*----------NOVEDADES-------------*/   
+    .banner-novedades-izq {
+        @include bannerDER-Celu;
+        p, h2, hr {
+            margin: 10px 50px 10px 50px;
+        }
+    }
+    .novedades-h3 {
+        font-size: 2em !important;
+    }
+    .novedades-h3--distinto {
+        font-size: 2em !important;
+       }
+    
+    /*-----------QUIENES SOMOS----------*/ 
+    .banner-quienes-der {
+        @include bannerDER-Celu;
+        p, h2, hr {
+            margin: 10px 50px 10px 50px;
+        }
+    }
+    .contenido-quienes {
+        padding: 0;
+    }
+    .item1-quienes{
+        margin: 3rem 0 3rem 0;
+        h2 {
+            font-size: 6em;
+            margin: 1rem 0 1rem 0;
+        }
+    }
+    .items-qnq {
+        margin: 1rem;
+    }
+    /*-----------MODULOS HABITACIONALES----------*/
+    .banner-modulos-izq {
+       @include bannerIZ-Celu;
+    }
+    .h3Modulo {
+        font-size: 1.5em !important;
+    }
+    /*----------AREA ABERTURAS DE ALUMINIO----------*/
+    .img-ventanas {
+        height: 40vh;
+    }
+    .img-ventanas2 {
+        height: 40vh;
+    }
+}

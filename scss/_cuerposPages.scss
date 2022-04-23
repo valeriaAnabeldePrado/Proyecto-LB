@@ -1,0 +1,887 @@
+@import "variables";
+
+////principal///////////////////
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+
+   } 
+   a {
+    text-decoration: none;
+   }
+   *h2 {
+       font-weight:800;
+   }
+   .index-banner{
+       background-image:url(../images/casaBanner.jpg);
+       @include banners;
+       hr {
+        width: 20%;
+        height: 6px;
+        background-color: #fff;
+        color: rgb(190, 164, 164);
+        z-index: 2;
+        align-items: left;
+        margin: 0;  
+    }
+   }
+   li {
+       list-style: none;
+   }
+   .banner-info{
+       @include bannerInfoIZ;
+   }
+   
+   .items {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-left: 12vw;
+       margin-right: 12vw;
+       padding: 30px;
+       button{
+           @include botones2; 
+        } 
+        h2 {
+            margin-bottom: 20px;
+        }
+   }
+   .index-nov-serv {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-evenly;
+       height: auto;
+       margin: 2rem 0 2rem 0;
+       .index-serv {
+           width: 50vh;
+           padding: 1em;
+           &--item h3 {
+            margin-bottom: $margenes-Bajos-items;
+           }
+           &--item button {
+               margin-top: 1rem;
+            @include botones2; 
+           }
+       }
+       .index-novedades {
+           width: 50vh;
+           height: auto;
+           padding: 2rem 7rem;
+           @include sombras;
+           margin: .3rem;
+            .index-serv--item--distinto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            h3 {
+                margin-bottom: 1rem; 
+            }  
+            p {
+                margin: .5rem;
+            }
+            }
+       }
+   }
+ 
+   .index-prod {
+       background-color: #4d4d4d;
+       color: #f7f7f7;
+       height: auto;
+       padding: 2rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       &--item {
+           width: 100vh;
+           padding: 30px;
+                h3 {
+                margin-bottom: $margenes-Bajos-items;
+                }
+                button {
+                    @include botones2;
+                }    
+       }
+   }
+   .index-trabRea {
+       background-image: url(../images/trabajosRea.jpg);
+       background-size:cover;
+       background-position: center center;
+       background-repeat: no-repeat;
+   }
+   .trabReaS{
+       display: flex;
+       align-items: center;
+       background-color: rgba(0,0,0,0.6);
+       margin-right: 50%;
+       height: 100%;
+       color: white;
+   }
+   .index-cosito{
+       background-color: #4d4d4d;
+       color: white;
+       height: auto;
+       padding: 1rem;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       align-items: center;
+       font-size: 1.3em;
+       li {
+           padding: 2rem;
+       }
+      
+   
+   }
+   
+   
+   //********************TRABAJOS REALIZADOS********************
+   
+   .main-trab-rea {
+       margin: 5px;
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .banner-trab-rea {
+       background-image: url(../images/trabajosRea.jpg);
+       @include banners;
+   }
+   .bannerizq-trab-rea { 
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-right: 50%;
+       background-color: rgba(0, 0, 0, 0.7);
+       height: 100%;
+       color: white;  
+   }
+   .info-trab-rea{
+       color: white;
+       background-color: #3e3e3e;
+       margin-top: 5px;
+       padding: 4rem;
+        .items-trab-rea{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 4rem;
+            color: $color;
+            h3 {
+                margin-bottom: $margenes-Bajos-items;
+                text-transform: uppercase;
+            }
+        }
+        .items-trab-rea::before {
+            content: "";
+            padding: 4px;
+            margin-bottom: 1.5rem;
+            background-color: #fff;
+            width: 5rem;
+        }
+    }
+   .imgs-trab-real {
+       padding: 2rem 0 2rem 0;
+   }
+   .imgC {
+        height: 75vh;
+        object-fit: cover; /*para que la imagen no se deforme se usa con object position*/
+        object-position: center;
+
+   }
+       
+   
+   //********************PRODUCTOS********************
+   
+   .banner-prod{
+       background-image: url(/images/Productos-banner.jpeg);
+       @include banners;
+   }
+   .banner-prod-aside {
+       @include bannerInfoIZ;
+       p, h2, hr {
+           margin: 10px 100px 10px 100px; 
+       }
+   }
+   
+   .seccion_productos {
+       height: auto;
+       &--containerBox{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           &--listaProductos{
+              display: flex;
+              flex-direction: column;
+              width: auto;
+              margin: 1rem 4rem 1rem 4rem;
+              padding: 2rem;
+              h2 {
+                  margin-bottom: 3rem;
+              }
+              ul {
+                  padding: 0;
+              }
+              .fa-solid {
+                  color: #3e3e3e;
+              }
+           } 
+       }
+       
+   }
+   .seccion_productos--containerBox--listaProductos::before {
+    content: "";
+    width: 6rem;
+    margin-bottom: 2rem;
+    padding: 4px;
+    background-color: $color;
+  }
+  .seccion_productos--containerBox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      button {
+          margin: 2rem 4rem 4rem 4rem;
+      }
+  }
+   
+   .prod-comercial {
+       height: 300px;
+       .prod-oscur{
+           background-color: black;
+           opacity: 0.6;
+           height: 100%;
+           width: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           p {color: white;
+               width: 50%;
+               text-align: center;
+           }
+       }
+   }
+   .catalogoContainer {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     h3 {
+         padding: 2rem;
+     }
+   }
+   .catalogo {
+       @include botones2;
+       border: solid black;
+       fill: #fff;
+       height: 11vh;
+       animation: latido 800ms infinite;
+       img {
+           padding: .5rem;
+           height: 8vh;
+           object-fit: scale-down;
+           object-position: center;
+       }
+       @keyframes latido {
+        0% {
+            box-shadow: 0 0 0 0 rgb(255, 230, 0);
+        }
+        100% {
+            box-shadow: 0 0 8px 16px rgba(124, 124, 124, 0.082);
+        }   
+    }
+   }
+   .imagenesCatalogo {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   ////////servicios///////
+   
+   .banner-servicios {
+       background-image: url(../images/home.png);
+       @include banners;
+   }
+   .banner-servicios-izq {
+       @include bannerInDE;  
+   }
+   
+   .contenido-servicios{
+       margin-top: 5px;
+       background-color: rgb(88, 88, 88);
+       position: relative;
+       height: auto;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       padding: 4rem ;
+        .contenido-servicio--itemA {
+            flex-direction: column;
+            margin: 1rem 2rem 1rem 2rem;
+            .items-svs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 35vh;
+                color: #fff;
+                margin-bottom: 4rem;
+            }
+        }
+        .t-svs {
+            border-left: 8px solid $color;
+            height: 50%;
+            position:absolute;
+            left: 50%;
+            margin-left: 3px;
+            top:200px;
+        }
+   }
+   
+   
+   
+   
+   //////////quienes///////////////
+   
+   .main-quienes{ 
+       display: flex;
+       flex-wrap: wrap;
+       margin: 5px;
+   }
+   .banner-quienes{
+       background-image: url(../images/quienesSomos.jpg);
+       @include banners;
+   }
+   .banner-quienes-der {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-left: 50%;
+       background-color: rgba(0, 0, 0, 0.7);
+       height: 100%;
+       color: white;               
+       p, h2, hr {
+           margin: 10px 140px 10px 140px; 
+       }
+    }
+       
+   .contenido-quienes{
+           position: relative;
+           padding: 0 1rem 4rem 1rem;
+           background-color: rgb(88, 88, 88);
+           height: auto;
+           width: 100%;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           align-content: space-around;
+           justify-content: space-between;
+       }
+   .item1-quienes{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 3rem;
+       padding: 0 4rem 0 4rem;
+       h2 {
+           font-size: 18vw;
+           margin: $margen-Bajo2;
+           text-align: center;
+           -webkit-text-stroke: 4px $color;
+           color: transparent; 
+       }
+       p{color: white;
+       text-align: center;
+       margin-bottom: $margen-Bajo2;
+    }
+   }
+   
+   .container-items--qnq{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content:space-around;
+       align-items: center;
+   }
+   .items-qnq {
+           width: 450px;
+           margin-bottom: 4rem;
+           h3 { color: $color;
+                margin: $margen-Bajo2;  
+        }
+           p {color: white;
+               margin: $margen-Bajo2
+               }
+       }
+   
+   .t-svs-quienes {
+           @include lineaMedia;
+           top: 65%;
+       }
+   
+   
+       /////////noveddades//////////
+   
+   .banner-novedades{
+           background-image: url(/images/bannernovedades.jpeg);
+           @include banners;
+       }
+   .banner-novedades-izq {
+           @include bannerInfoIZ;                
+           p, h2, hr {
+               margin: 10px 140px 10px 140px; 
+           }
+      }
+   .seccion_novedades {
+       background-color: #4d4d4d;
+       @include itemNovedades;
+       margin-bottom: 8px;
+          &-img {
+              height: 60vh;
+              object-fit:scale-down;
+              object-position: center;
+              margin: 3rem 1rem 3rem 1rem;
+            }
+          &-texto{
+              margin: 3rem;
+              .novedades-h3 {
+                    @include novedadesH3;
+                    color: #fff;
+                    font-size: 2.5em;
+              }
+                button {
+                    @include botones2;
+                } 
+          } 
+   }
+   .seccion_novedades2 {
+       @include itemNovedades;
+       .novedades-h3--distinto {
+        @include novedadesH3;
+        font-size: 2.5em;
+       }
+   }
+   
+   
+   
+   ///////////********MODULOS********///////////
+   
+   .banner-modulos {
+       background-image: url(../images/bannernovedades.jpeg);
+       @include banners;
+   }
+   .banner-modulos-izq {
+       @include bannerInDE;  
+   }
+
+   .modulos-info1 {
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+   }
+   .mod-caj{
+    display: block;
+    padding: 2rem 3.5rem 2rem 3.5rem;
+    margin-bottom: 2.5rem;
+    @include sombras;
+    }
+    .vectores {
+        width: 5vh;
+        margin-bottom: 1.5rem;
+    }
+    .itemsmod {
+        width: auto;
+     height: auto;
+     margin: 1.5rem;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+        &-item{
+            width: 60vh;
+            h3 {
+                @include h3Random;
+            }
+        }
+    }
+    .otro {
+        margin-bottom: 3rem;
+    }
+    .itemsMod-parte2 {
+         height: auto;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         align-items: center;
+         padding: 2rem;
+         .items-info2 {
+             width: 60vh;
+             padding: 3.2rem;
+             h3 {
+                 @include h3Random;
+             }
+         } 
+     }
+     .modulos-info3{
+         padding: 2rem;
+         height: 40vh;
+         background: linear-gradient(to right, #706d6f9d, #22212194), url("../images/bannernovedades.jpeg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         .items {
+             .h3Modulo {
+                 margin-bottom: 2.5rem;
+                 font-weight: 600;
+                 text-transform: uppercase;
+                 font-size: 2.5em;
+             }
+             p {
+                 margin-bottom: 2.5rem;
+             }
+         }
+         .botonModulo{
+             margin:auto;  
+             width: auto;
+             padding: .5rem 2rem .5rem 2rem;
+         }
+     }
+     hr {
+         visibility: hidden;
+    }
+    .containerIMG {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .containerIMG-img {
+            padding: 4rem 0 4rem 0;
+        }
+        .contenedor-text {
+            width: 80%;
+            padding: 6rem 3rem 0 3rem;
+            h3 {
+                @include h3Random;
+            }
+        }
+    }
+   .imagenesPlanos {
+       display: flex;
+       flex-direction: column;
+       img {
+           width: 100%;
+       }
+   }
+  
+ 
+    ///////******FOOOTEEEEEERRR**********/////////// 
+   
+    .footer-foo{
+        height: auto;
+        padding: 3rem;
+        background-color: #4d4d4d;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .itemfoo {
+            @include disposicion-item;
+            margin: 1rem;
+        }
+        .itemfoo-redes{
+            height: auto;
+            @include disposicion-item;
+            font-size: 1.5rem;
+        }
+        
+    }
+
+
+    ///////smart/////// 
+    .banner-sistemaSmart {
+        background-image: url(../images/bannerSmart.jpg);
+       @include banners;
+    }
+    
+
+   .smart-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem 0 5rem 0;
+    p {
+        width: 60%;
+        padding: 3rem
+    }
+}
+
+.smart-ventajas {
+    background-color: #4d4d4d;
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+    position: relative;
+    
+    .smart-ventajas-cont{
+        margin: 3rem 0 3rem 0;
+        color: white;
+        .smart-ventajas-cont-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            .smartItems {
+                width: 30%;
+                padding: 3rem;
+                margin: 0 2rem 0 2rem;
+                h3{
+                    color: #fddc1f;
+                    font-weight: bold;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        
+        .h2Ventajas{
+            font-size: 12vw;
+           margin: $margen-Bajo2;
+           text-align: center;
+           -webkit-text-stroke: 2px $color;
+           color: transparent;        
+}}}
+    .linea-media {
+        @include lineaMedia;
+        visibility: visible;
+    }
+    .smart-panel {
+        height: auto;
+        padding: 4rem 0 4rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+         .smart-panel--img {
+             height: 70vh;
+             object-fit: cover;
+             object-position: center;
+             margin: 0 3rem 3rem 3rem;
+         }
+         .item-paneles {
+             width: 45%;
+             margin: 0 2rem 0 2rem;
+             h3 {
+                font-weight: bold;
+                margin-bottom: 3rem;
+                text-transform: uppercase;
+             }
+         }
+    }
+    .smart-info2 {
+        background-color:#4d4d4d ;
+        padding: 5rem 0 5rem 0;
+        margin: 5px 0 5px 0;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        button{
+            @include botones2; 
+            margin: 3rem;
+        } 
+        .smart-info2-cont {
+            color: #fff;
+            width: 40%;
+            margin: 0 3rem 0 3rem;
+            h3 {
+                margin-bottom: 3rem;
+                font-weight: 600;
+            }
+        }
+    }
+    .imagenesPlanos {
+        width: 100%;
+        height: 90%;
+    }
+
+/////////////aberturas//////////////
+
+.banner-aberturas {
+    background-image: url(../images/aluminiobanner.jpg);
+    @include banners;
+}
+
+.abert-info {
+    height: auto;
+    padding: 5rem 3rem 5rem 2rem;
+    width: 60%;
+    text-align: center;
+}
+.carpinteria-texto{
+    width: 30%;
+    color: #fff;
+    margin: 0 4rem 0 4rem;
+    h3 {
+        @include novedadesH3;
+        color: #fff; 
+    }
+}
+.carpinteria-texto2 {
+    width: 30%;
+    margin: 0 5rem 0 5rem;
+    h3 {
+        @include novedadesH3; 
+        margin-top: 2rem;
+    }
+}
+.img-ventanas {
+    height: 50vh;
+    -webkit-box-shadow:6px 3px 18px 12px rgba(62,66,66,0.36);
+    -moz-box-shadow: 6px 3px 18px 12px rgba(62,66,66,0.36);
+     box-shadow: 6px 3px 18px 12px rgba(62,66,66,0.36);
+     margin-right: 2rem;
+     transition: all .5s ease-in-out;
+        &:hover {
+            transform: translateY(-30px);
+            -webkit-box-shadow:14px 11px 24px 26px rgba(62,66,66,0.47);
+            -moz-box-shadow: 14px 11px 24px 26px rgba(62,66,66,0.47);
+            box-shadow: 14px 11px 24px 26px rgba(62,66,66,0.47);
+            filter: sepia(15%);
+            cursor: pointer;
+        }
+}
+.img-ventanas2 {
+    height: 50vh;
+    -webkit-box-shadow:6px 3px 18px 12px rgba(0, 0, 0, 0.459);
+    -moz-box-shadow: 6px 3px 18px 12px rgba(0, 0, 0, 0.521);
+     box-shadow: 6px 3px 18px 12px rgba(0, 0, 0, 0.493);
+     margin-right: 2rem;
+     transition: all .5s ease-in-out;
+     &:hover {
+        transform: translateY(-30px);
+        -webkit-box-shadow:6px 3px 18px 12px rgba(0, 0, 0, 0.753);
+        -moz-box-shadow: 6px 3px 18px 12px rgba(0, 0, 0, 0.76);
+         box-shadow: 6px 3px 18px 12px rgba(0, 0, 0, 0.767);
+        filter: sepia(15%);
+        cursor: pointer;
+    }
+}
+.ventana-sinModal {
+    &:hover {
+        cursor: context-menu;
+        transform: none;
+    }
+}
+.modal-content {
+    background-color: #4d4d4d;
+    color: #fff;
+    border: none;
+    .modal-title{
+        text-transform: uppercase;
+        font-weight: bolder;
+        line-height: 40px;
+        margin-left: 2rem;
+        color: $color;
+    }
+    .modal-footer{
+        border: none;  
+    }
+    .modal-body{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem 0 2rem;
+        p {
+            text-align: center
+        }
+    }
+    .boton-modal {
+        @include botones2;
+    }
+}
+
+
+
+
+/////FORMULARIO
+
+
+.container-form{
+    background-color: #4d4d4d;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario { 
+    h2{text-align: center;
+    margin: 1rem 1rem 3rem 1rem;}
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: white;
+    @include sombras;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 60vw;
+    margin: 7rem;
+    padding: 3rem;
+}
+
+.form-control {
+    position: relative;
+    i{
+        visibility: hidden;
+        position: absolute;
+        top: 40px;
+        right: 20px
+    }
+}
+.form-control small {
+        visibility: hidden;
+        color: red;
+        font-weight: bold;
+}
+
+.form-control.succes i {
+    visibility: visible;
+}
+.form-control.error small{
+    visibility: visible;
+}
+.inputs1 { 
+    display: flex;
+    text-align: center;
+    width: 60%;
+    height: 40px;
+    border: solid 4px $color;
+    margin: auto;
+    outline: none;
+}
+
+.inpmes{
+    height: 20vh;
+}
+.enviarform {
+    margin:auto;
+    @include botones2;
+     } 
+.footer-foo {
+    margin-top: 4px;
+}
